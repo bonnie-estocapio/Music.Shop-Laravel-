@@ -1,5 +1,7 @@
 <?php
 
+use App\Mail\OrderCompleted;
+use Illuminate\Support\Facades\Mail;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -15,4 +17,9 @@ use Illuminate\Support\Facades\Route;
 
 Route::get('/', function () {
     return view('welcome');
+});
+
+Route::get('/sendmail', function () {
+    Mail::to('kyle.estocapio031@gmail.com')->send(new OrderCompleted("Kairu"));
+    return "completed";
 });
