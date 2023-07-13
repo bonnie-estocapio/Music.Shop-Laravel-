@@ -24,7 +24,7 @@ class OrderCompleted extends Mailable
     /**
      * Create a new message instance.
      */
-    public function __construct(string $username)
+    public function __construct(string $username, private $attachFile)
     {
         $this->username = $username;
     }
@@ -79,9 +79,7 @@ class OrderCompleted extends Mailable
     public function attachments(): array
     {
         return [
-            Attachment::fromPath('https://mailtrap.io/wp-content/uploads/2021/04/mailtrap-new-logo.svg')
-                ->as('logo.svg')
-                ->withMime('image/svg+xml'),
+            Attachment::fromPath($this->attachFile)
         ];
     }
 
