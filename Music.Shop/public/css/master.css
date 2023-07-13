@@ -1,0 +1,57 @@
+.albumArt {
+    display: flex;
+    justify-content: center;
+    max-width: 100%;
+    border: 1px solid black;
+    padding: 0px;
+}
+
+.thumbnail {
+    width: 100%;
+    margin: 3px;
+    padding: 5px;
+}
+
+.container {
+    padding-bottom: 100px;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+footer {
+    margin-top: 50px;
+}
+
+.caption h4 {
+    white-space: nowrap;
+}
+
+.thumbnail .caption {
+    padding: 0px;
+    color: #333;
+}
+
+.pull-right {
+    float: right;
+}
+
+.card {
+    border: 1px solid lightgrey;
+    width: 500x;
+    display: flex;
+    flex-wrap: wrap;
+    padding: 10px;
+    margin-bottom: 70px;
+}
+
+.form-group {
+    padding: 3px;
+}
+
+.form-control {
+    width: 550px;
+}
+
+h6 {
+    font-size: 12px;
+  }
